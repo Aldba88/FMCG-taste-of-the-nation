@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FMCG Trends and Insights</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            Calendly.initBadgeWidget({
+                url: 'https://calendly.com/aldoballarini/catch-up',
+                text: 'Book a chat with the team',
+                color: '#91c11e',
+                textColor: '#ffffff',
+                branding: undefined
+            });
+        }
+    </script>
+    <!-- Calendly badge widget end -->
 </head>
 <body>
     <header>
@@ -41,7 +56,6 @@
         <h2>Schedule an Appointment</h2>
         <div id="calendly-widget"></div>
     </section>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="app.js"></script>
 </body>
 </html>
