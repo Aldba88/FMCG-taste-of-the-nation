@@ -32,16 +32,17 @@ app.get('/', (req, res) => {
 
 // Handle form submission
 app.post('/submit', async (req, res) => {
-  console.log('Form Data:', req.body); // Log form data
+  console.log('Form Data Received:', req.body); // Log form data
   const { fullName, company, email } = req.body;
 
   try {
     const lead = new Lead({ fullName, company, email });
+    console.log('Lead Object Created:', lead); // Log Lead object creation
     await lead.save();
-    console.log(`Lead saved: ${fullName}, ${company}, ${email}`);
+    console.log('Lead Saved:', lead); // Log successful save
     res.send('<h1>Thank you for your submission!</h1><p>Your report is ready to download: <a href="/path/to/your/pdf/file.pdf" download>Download PDF</a></p>');
   } catch (error) {
-    console.error('Error saving lead:', error);
+    console.error('Error Saving Lead:', error); // Log error if save fails
     res.status(500).send('Internal Server Error');
   }
 });
