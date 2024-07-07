@@ -13,7 +13,7 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
     window.location.href = 'path/to/your/pdf/DC-24415_HF-AU-Taste-of-Nation-Report-2022-2023_1980x1020_V7 (1) (1).pdf';
 });
 
-// Load Calendly widget
+// Load Calendly widget..
 window.onload = function() {
     Calendly.initInlineWidget({
         url: 'https://calendly.com/aldoballarini',
